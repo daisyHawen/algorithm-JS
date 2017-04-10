@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+  
+    <input type="button" value="Click me" onclick="showMessage()">
+
+</body>
+<script type="text/javascript">
+function showMessage(){
+    with(document) {
+        with(this){
+        	alert(this.value)
+        }
+    }
+}
+</script>
+
+</html>

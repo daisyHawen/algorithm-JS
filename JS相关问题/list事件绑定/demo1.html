@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <ul class="list">
+        <li class="list-item">1</li>
+        <li class="list-item">2</li>
+        <li class="list-item">3</li>
+        <li class="list-item">4</li>
+        <li class="list-item">5</li>
+    </ul>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+//利用冒泡，绑定事件到父元素
+$('.list').on('click', 'li', function(event) {
+    console.log($(event.target).html());
+    console.log(this); //所在的li
+})
+</script>
+
+</html>

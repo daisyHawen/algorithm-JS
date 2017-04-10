@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function jsonp(req) {
+		var script=document.createElement('script');
+		var url=req.url+'?callback='+req.callback.name;
+		script.src=url;
+		document.getElementsByTagName('head')[0].appendChild(script);
+	}
+	function hello(res) {
+		alert('hello'+res.data)
+	}
+	jsonp({
+		url:'http://127.0.0.1:8080',
+		callback:hello
+	});
+</script>
+</html>
